@@ -1,0 +1,54 @@
+// Set colors
+$color-primary: #F29F05;
+$color-secondary: #F2A341;
+$color-accent: #D9863D;
+$color-background: #F2F2F2;
+$color-text: #372B2B;
+$color-text2: #B36E32;
+
+#header {
+  // Set width and height
+  width: 100vw; 
+  height: 80vh;
+  
+  display: flex; // Makes it a flexbox
+  justify-content: center; // Centers items along the main axis
+  align-items: center; // Centers items along the second axis
+  flex-direction: column; // Makes the elements stack on top of each other
+
+  background-image: url(/background.svg);
+  background-size: cover; // Makes the background image take up the full space
+  
+  h1 {
+    font-size: 5rem;
+    margin: 0;
+    font-weight: 400;
+  }
+  h2 {
+    margin: 0;
+    font-weight: 300;
+  }
+}
+
+#main {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  flex-direction: column;
+
+  padding: 6rem 0;
+  text-align: center;
+
+  gap: 4rem;
+
+  h2 {
+    font-size: 3rem;
+    font-weight: 400;
+    margin: 0 0 0.2em 0;
+  }
+  p {
+    max-width: 60ch;
+    font-weight: 300;
+    margin: 0;
+  }
+}

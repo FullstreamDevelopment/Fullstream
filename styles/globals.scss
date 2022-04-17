@@ -1,0 +1,59 @@
+@import url("https://use.typekit.net/ggq7pxx.css"); // Import font from Adobe Fonts
+
+// Set colors
+$color-primary: #F29F05;
+$color-secondary: #F2A341;
+$color-accent: #D9863D;
+$color-background: #F2F2F2;
+$color-text: #372B2B;
+$color-text2: #B36E32;
+
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: neue-haas-grotesk-text, sans-serif; // Neue Haas Grotesk = Helvetica :)
+  color: $color-text;
+  overflow-x: hidden;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: neue-haas-grotesk-display, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h2 {
+    span {
+      color: $color-text2;
+      position: relative;
+
+      &:after {
+        content: "";
+        background: rgba(217,134,61,0.3);
+        backdrop-filter: blur(3px);
+        width: 105%;
+        height: 100%;
+
+        position: absolute; // Sets the position to be right on top of the element
+        top: 0;
+        left: -2.5%;
+
+        z-index: -1; // Moves it back a layer so it's underneath the text
+        transform: scaleX(0); 
+        transform-origin: right;
+
+        transition: transform 0.3s ease-in-out;
+      }
+    }
+    &:hover {  
+      span::after {
+        transform: scaleX(1); 
+        transform-origin: left;
+      }    
+    }
+  }
